@@ -1,10 +1,16 @@
 <template>
   <div class="hello">
     <h1>Vanity ETH Address Generator</h1>
+    <input type="text" placeholder="0000000000..."/>
+    <input type="button" value="generate"/>
   </div>
 </template>
 
 <script>
+// import Web3 from 'web3';
+import eca from 'ethereum-checksum-address';
+console.log(eca.toChecksumAddress('0x7a9e457991352f8fefb90ab1ce7488df7cda6ed5'));
+
 export default {
   name: 'HelloWorld'
 }
