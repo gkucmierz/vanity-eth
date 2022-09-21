@@ -10,10 +10,10 @@
   "dependencies": {
     "buffer": "^6.0.3",
     "ethereum-checksum-address": "^0.0.8",
+    "ethereum-private-key-to-address": "^0.0.7",
     "register-service-worker": "^1.7.2",
     "stream-browserify": "^3.0.0",
-    "vue": "^3.2.13",
-    "web3": "^1.8.0"
+    "vue": "^3.2.13"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "~5.0.0",
