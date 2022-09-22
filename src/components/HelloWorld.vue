@@ -8,11 +8,17 @@
 
 <script>
 
-import eca from 'ethereum-checksum-address';
-import pk2a from 'ethereum-private-key-to-address';
+import Worker from '../vanity.worker.js';
+// import eca from 'ethereum-checksum-address';
+// console.log(eca.toChecksumAddress('0x7a9e457991352f8fefb90ab1ce7488df7cda6ed5'));
 
-console.log(eca.toChecksumAddress('0x7a9e457991352f8fefb90ab1ce7488df7cda6ed5'));
-console.log(pk2a('4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d'))
+const worker = new Worker();
+
+worker.postMessage({ phrase: '000' });
+
+worker.onmessage =  event => {
+  console.log(event.data);
+};
 
 export default {
   name: 'HelloWorld'

@@ -23,5 +23,13 @@ module.exports = defineConfig({
         'buffer': require.resolve('buffer')
       }
     },
+    module: {
+      rules: [
+        {
+          test: /\.worker\.js$/,
+          use: { loader: 'worker-loader' },
+        },
+      ],
+    },
   }
 });
