@@ -41,7 +41,6 @@ const runner = (sendWork => {
 
   return {
     start: () => {
-      console.log('start')
       const lastStop = stop;
       stop = false;
       if (lastStop) {
