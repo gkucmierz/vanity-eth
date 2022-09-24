@@ -18,7 +18,7 @@
       value="clear"
       @click="result = []; cnt = 0;"
       />
-    <pre>{{ regex }}</pre>
+    <pre>RegExp: {{ regex }}</pre>
     <pre>Results: {{ result.length }} / {{ cnt }}</pre>
     <div class="result">
       <table>
