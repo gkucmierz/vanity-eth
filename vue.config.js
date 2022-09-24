@@ -3,6 +3,7 @@ const { defineConfig } = require('@vue/cli-service')
 const webpack = require('webpack');
 
 module.exports = defineConfig({
+  publicPath: process.env.NODE_ENV === 'production' ? '/vanity-eth/' : '/',
   pages: {
     index: {
       entry: 'src/main.js',
