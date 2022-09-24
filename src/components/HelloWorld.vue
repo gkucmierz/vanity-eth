@@ -56,8 +56,8 @@ const createRegex = str => {
 const init = that => {
   workers.map(worker => {
     worker.onmessage =  ({ data }) => {
+      that.cnt += data.cnt;
       if (data.matches.length > 0) {
-        that.cnt += data.cnt;
         that.result.push(...data.matches);
       }
     };
