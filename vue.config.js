@@ -32,5 +32,21 @@ module.exports = defineConfig({
         },
       ],
     },
-  }
+  },
+  pwa: {
+    name: 'Vanity ETH',
+    themeColor: '#42A5F5',
+    msTileColor: '#000000',
+    appleMobileWebAppCapable: 'yes',
+    appleMobileWebAppStatusBarStyle: 'black',
+    startUrl: '/vanity-eth/index.html',
+
+    manifestPath: 'manifest.json',
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+      // swSrc is required in InjectManifest mode.
+      swSrc: './src/service-worker.js',
+      // ...other Workbox options...
+    },
+  },
 });
