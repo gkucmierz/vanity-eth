@@ -20,6 +20,7 @@
       />
     <pre>RegExp: {{ regex }}</pre>
     <pre>Results: {{ result.length }} / {{ cnt }}</pre>
+    <pre>{{ percent }}%</pre>
     <div class="result">
       <table>
         <tr>
@@ -74,6 +75,7 @@ export default {
       correct: true,
       generate: false,
       cnt: 0,
+      percent: '0.00',
       result: [],
     }
   },
@@ -95,7 +97,10 @@ export default {
       } else {
         workers.map(worker => worker.postMessage({ action: 'stop' }));
       }
-    }
+    },
+    cnt(val) {
+      this.percent = (this.result.length / val * 100).toFixed(2);
+    },
   },
 }
 </script>
